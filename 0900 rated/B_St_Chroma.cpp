@@ -1,0 +1,24 @@
+// Problem Link https://codeforces.com/contest/2106/problem/B
+
+#include <bits/stdc++.h>
+using namespace std;
+#define int long long
+
+void solve(){
+    int n, x;
+    cin >> n >> x;
+    for (int i = 0; i < n; i++){
+        if(i == x)     continue;
+        cout << i << " ";
+    }
+    if(x != n)     cout << x << "\n";
+    else    cout << "\n";
+}
+
+signed main(){
+    int t;
+    cin >> t;
+    while(t--){
+        solve();
+    }
+}
