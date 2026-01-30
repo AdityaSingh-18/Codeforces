@@ -10,6 +10,38 @@ void solve(){
     string s;
     cin >> s;
     s = '0' + s + '0';
+    int count = 0, zero = 0;
+    for (int i = 0; i < (n + 2); i++){
+        if(s[i] == '1'){
+            count += 1 + zero / 3;
+            zero = 0;
+        }
+        else     zero++;
+    }
+    count += zero / 3;
+    cout << count << "\n";
+}
+
+signed main(){
+    int t;
+    cin >> t;
+    while(t--){
+        solve();
+    }
+}
+
+/*
+
+#include <bits/stdc++.h>
+using namespace std;
+#define int long long
+
+void solve(){
+    int n;
+    cin >> n;
+    string s;
+    cin >> s;
+    s = '0' + s + '0';
     vector<int> a;
     int count = 0, zero = 0;
     for (int i = 0; i < n + 2; i++){
@@ -34,3 +66,5 @@ signed main(){
         solve();
     }
 }
+
+*/
