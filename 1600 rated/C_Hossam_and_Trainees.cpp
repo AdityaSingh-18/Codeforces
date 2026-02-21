@@ -21,7 +21,7 @@ void solve() {
                 break;
             }
             if (x % p == 0) {
-                if (s.contains(p)) {
+                if (s.count(p)) {
                     cout << "YES\n";
                     return;
                 }
@@ -32,7 +32,7 @@ void solve() {
             }
         }
         if (x > 1) {
-            if (s.contains(x)) {
+            if (s.count(x)) {
                 cout << "YES\n";
                 return;
             }
